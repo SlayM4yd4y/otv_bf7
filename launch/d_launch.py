@@ -9,9 +9,13 @@ def generate_launch_description():
             name='sim'
         ),
         Node(
-            package='turtle_race',
-            #executable='draw_node',
+            package='otv_bf7',
             executable='iranyitas',
+            output='screen',
+        ),
+        Node(
+            package='otv_bf7',
+            executable='draw_node',
             output='screen',
         ),
     ])
