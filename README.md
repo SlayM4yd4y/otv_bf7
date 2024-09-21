@@ -1,4 +1,4 @@
-# `turtle_race` ROS 2 package
+# `otv_bf7` ROS 2 package
 Built for a university class.
 ## Build this ROS 2 package
 ``` r
