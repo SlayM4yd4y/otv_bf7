@@ -1,0 +1,63 @@
+[0.000000] (-) TimerEvent: {}
+[0.000205] (turtle_race) JobQueued: {'identifier': 'turtle_race', 'dependencies': OrderedDict()}
+[0.000275] (turtle_race) JobStarted: {'identifier': 'turtle_race'}
+[0.008981] (turtle_race) JobProgress: {'identifier': 'turtle_race', 'progress': 'cmake'}
+[0.009707] (turtle_race) JobProgress: {'identifier': 'turtle_race', 'progress': 'build'}
+[0.010216] (turtle_race) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ajr/ros2_ws/src/turtle_race/build/turtle_race', '--', '-j16', '-l16'], 'cwd': '/home/ajr/ros2_ws/src/turtle_race/build/turtle_race', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ajr'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/home/ajr/ros2_ws/install/pid_library/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ajr'), ('OLDPWD', '/home/ajr/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'ajr'), ('_colcon_cd_root', '/opt/ros/humble/'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ajr/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ajr'), ('NAME', 'Zephyrus'), ('WSL_INTEROP', '/run/WSL/351_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/ajr/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.2.4.0_x64__8wekyb3d8bbwe:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/CodeBlocks:/mnt/c/Users/attil/OneDrive/Desktop/OTVOSATTILA_BF7RL1_1127_ETTEREMRBF/CMakeLists.txt:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/attil/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm 2023.3.2/bin:/mnt/c/Users/attil/.dotnet/tools:/mnt/c/Program Files/JetBrains/CLion 2023.3.3/bin:/mnt/c/Users/attil/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Azure Data Studio/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '73'), ('AMENT_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/turtle_race:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/ajr/ros2_ws/src/turtle_race/build/turtle_race'), ('RCUTILS_COLORIZED_OUTPUT', '1'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ajr/ros2_ws/install/arj_transforms_py/lib/python3.10/site-packages:/home/ajr/ros2_ws/install/arj_intro_py/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/turtle_race:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_cpp:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[0.038039] (turtle_race) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099215] (-) TimerEvent: {}
+[0.130959] (turtle_race) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.147219] (turtle_race) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.199313] (-) TimerEvent: {}
+[0.261204] (turtle_race) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.264487] (turtle_race) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.271920] (turtle_race) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.283958] (turtle_race) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.298452] (turtle_race) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.299396] (-) TimerEvent: {}
+[0.341176] (turtle_race) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.344010] (turtle_race) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.399524] (-) TimerEvent: {}
+[0.499843] (-) TimerEvent: {}
+[0.600144] (-) TimerEvent: {}
+[0.700424] (-) TimerEvent: {}
+[0.800718] (-) TimerEvent: {}
+[0.901034] (-) TimerEvent: {}
+[1.001356] (-) TimerEvent: {}
+[1.101663] (-) TimerEvent: {}
+[1.201959] (-) TimerEvent: {}
+[1.302231] (-) TimerEvent: {}
+[1.402518] (-) TimerEvent: {}
+[1.502833] (-) TimerEvent: {}
+[1.603107] (-) TimerEvent: {}
+[1.703416] (-) TimerEvent: {}
+[1.803755] (-) TimerEvent: {}
+[1.904080] (-) TimerEvent: {}
+[2.004402] (-) TimerEvent: {}
+[2.104697] (-) TimerEvent: {}
+[2.204999] (-) TimerEvent: {}
+[2.305283] (-) TimerEvent: {}
+[2.405597] (-) TimerEvent: {}
+[2.505894] (-) TimerEvent: {}
+[2.606202] (-) TimerEvent: {}
+[2.706488] (-) TimerEvent: {}
+[2.806817] (-) TimerEvent: {}
+[2.907137] (-) TimerEvent: {}
+[3.007456] (-) TimerEvent: {}
+[3.107802] (-) TimerEvent: {}
+[3.208106] (-) TimerEvent: {}
+[3.308402] (-) TimerEvent: {}
+[3.371964] (turtle_race) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.408514] (-) TimerEvent: {}
+[3.433282] (turtle_race) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[3.496409] (turtle_race) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:21 (add_executable):\n'}
+[3.496633] (turtle_race) StderrLine: {'line': b'  The target name "test" is reserved when CTest testing is enabled.\n'}
+[3.496700] (turtle_race) StderrLine: {'line': b'\n'}
+[3.496756] (turtle_race) StderrLine: {'line': b'\x1b[0m\n'}
+[3.496810] (turtle_race) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.496868] (turtle_race) StdoutLine: {'line': b'See also "/home/ajr/ros2_ws/src/turtle_race/build/turtle_race/CMakeFiles/CMakeOutput.log".\n'}
+[3.501929] (turtle_race) StderrLine: {'line': b'gmake: *** [Makefile:267: cmake_check_build_system] Error 1\n'}
+[3.503555] (turtle_race) CommandEnded: {'returncode': 2}
+[3.508592] (-) TimerEvent: {}
+[3.531407] (turtle_race) JobEnded: {'identifier': 'turtle_race', 'rc': 2}
+[3.542025] (-) EventReactorShutdown: {}

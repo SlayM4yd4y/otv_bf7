@@ -1,0 +1,123 @@
+[0.000000] (-) TimerEvent: {}
+[0.000343] (turtle_race) JobQueued: {'identifier': 'turtle_race', 'dependencies': OrderedDict()}
+[0.000404] (turtle_race) JobStarted: {'identifier': 'turtle_race'}
+[0.011032] (turtle_race) JobProgress: {'identifier': 'turtle_race', 'progress': 'cmake'}
+[0.011922] (turtle_race) Command: {'cmd': ['/usr/bin/cmake', '/home/ajr/ros2_ws/src/turtle_race', '-DCMAKE_INSTALL_PREFIX=/home/ajr/ros2_ws/src/turtle_race/install/turtle_race'], 'cwd': '/home/ajr/ros2_ws/src/turtle_race/build/turtle_race', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ajr'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/home/ajr/ros2_ws/install/pid_library/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ajr'), ('OLDPWD', '/home/ajr/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'ajr'), ('_colcon_cd_root', '/opt/ros/humble/'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ajr/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ajr'), ('NAME', 'Zephyrus'), ('WSL_INTEROP', '/run/WSL/341_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/ajr/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.2.4.0_x64__8wekyb3d8bbwe:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/CodeBlocks:/mnt/c/Users/attil/OneDrive/Desktop/OTVOSATTILA_BF7RL1_1127_ETTEREMRBF/CMakeLists.txt:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/attil/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm 2023.3.2/bin:/mnt/c/Users/attil/.dotnet/tools:/mnt/c/Program Files/JetBrains/CLion 2023.3.3/bin:/mnt/c/Users/attil/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Azure Data Studio/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '73'), ('AMENT_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/turtle_race:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/ajr/ros2_ws/src/turtle_race/build/turtle_race'), ('RCUTILS_COLORIZED_OUTPUT', '1'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ajr/ros2_ws/install/arj_transforms_py/lib/python3.10/site-packages:/home/ajr/ros2_ws/install/arj_intro_py/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/turtle_race:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_cpp:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[0.067984] (turtle_race) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099476] (-) TimerEvent: {}
+[0.169413] (turtle_race) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.189153] (turtle_race) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.199580] (-) TimerEvent: {}
+[0.299896] (-) TimerEvent: {}
+[0.323529] (turtle_race) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.327156] (turtle_race) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.335531] (turtle_race) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.348312] (turtle_race) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.363955] (turtle_race) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.400035] (-) TimerEvent: {}
+[0.404088] (turtle_race) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.406858] (turtle_race) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.500152] (-) TimerEvent: {}
+[0.600487] (-) TimerEvent: {}
+[0.700854] (-) TimerEvent: {}
+[0.801229] (-) TimerEvent: {}
+[0.901598] (-) TimerEvent: {}
+[1.001976] (-) TimerEvent: {}
+[1.102316] (-) TimerEvent: {}
+[1.202669] (-) TimerEvent: {}
+[1.303043] (-) TimerEvent: {}
+[1.403389] (-) TimerEvent: {}
+[1.503739] (-) TimerEvent: {}
+[1.604089] (-) TimerEvent: {}
+[1.704416] (-) TimerEvent: {}
+[1.804780] (-) TimerEvent: {}
+[1.905155] (-) TimerEvent: {}
+[2.005541] (-) TimerEvent: {}
+[2.105878] (-) TimerEvent: {}
+[2.206228] (-) TimerEvent: {}
+[2.306549] (-) TimerEvent: {}
+[2.406901] (-) TimerEvent: {}
+[2.507224] (-) TimerEvent: {}
+[2.607561] (-) TimerEvent: {}
+[2.707930] (-) TimerEvent: {}
+[2.808292] (-) TimerEvent: {}
+[2.908638] (-) TimerEvent: {}
+[3.009000] (-) TimerEvent: {}
+[3.109348] (-) TimerEvent: {}
+[3.209827] (-) TimerEvent: {}
+[3.310276] (-) TimerEvent: {}
+[3.311582] (turtle_race) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.372730] (turtle_race) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[3.410379] (-) TimerEvent: {}
+[3.441805] (turtle_race) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.455661] (turtle_race) StdoutLine: {'line': b'-- Generating done\n'}
+[3.456971] (turtle_race) StdoutLine: {'line': b'-- Build files have been written to: /home/ajr/ros2_ws/src/turtle_race/build/turtle_race\n'}
+[3.467128] (turtle_race) CommandEnded: {'returncode': 0}
+[3.467712] (turtle_race) JobProgress: {'identifier': 'turtle_race', 'progress': 'build'}
+[3.468645] (turtle_race) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ajr/ros2_ws/src/turtle_race/build/turtle_race', '--', '-j16', '-l16'], 'cwd': '/home/ajr/ros2_ws/src/turtle_race/build/turtle_race', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ajr'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/home/ajr/ros2_ws/install/pid_library/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ajr'), ('OLDPWD', '/home/ajr/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'ajr'), ('_colcon_cd_root', '/opt/ros/humble/'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ajr/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ajr'), ('NAME', 'Zephyrus'), ('WSL_INTEROP', '/run/WSL/341_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/ajr/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.2.4.0_x64__8wekyb3d8bbwe:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/CodeBlocks:/mnt/c/Users/attil/OneDrive/Desktop/OTVOSATTILA_BF7RL1_1127_ETTEREMRBF/CMakeLists.txt:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/attil/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm 2023.3.2/bin:/mnt/c/Users/attil/.dotnet/tools:/mnt/c/Program Files/JetBrains/CLion 2023.3.3/bin:/mnt/c/Users/attil/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Azure Data Studio/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '73'), ('AMENT_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/turtle_race:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/ajr/ros2_ws/src/turtle_race/build/turtle_race'), ('RCUTILS_COLORIZED_OUTPUT', '1'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ajr/ros2_ws/install/arj_transforms_py/lib/python3.10/site-packages:/home/ajr/ros2_ws/install/arj_intro_py/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/turtle_race:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_cpp:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[3.499981] (turtle_race) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target draw_node\x1b[0m\n'}
+[3.510508] (-) TimerEvent: {}
+[3.516482] (turtle_race) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/draw_node.dir/src/draw_node.cpp.o\x1b[0m\n'}
+[3.610684] (-) TimerEvent: {}
+[3.711116] (-) TimerEvent: {}
+[3.811518] (-) TimerEvent: {}
+[3.911910] (-) TimerEvent: {}
+[4.012265] (-) TimerEvent: {}
+[4.112627] (-) TimerEvent: {}
+[4.212993] (-) TimerEvent: {}
+[4.313376] (-) TimerEvent: {}
+[4.413736] (-) TimerEvent: {}
+[4.514092] (-) TimerEvent: {}
+[4.614458] (-) TimerEvent: {}
+[4.714891] (-) TimerEvent: {}
+[4.815379] (-) TimerEvent: {}
+[4.915802] (-) TimerEvent: {}
+[5.016228] (-) TimerEvent: {}
+[5.116621] (-) TimerEvent: {}
+[5.216973] (-) TimerEvent: {}
+[5.317326] (-) TimerEvent: {}
+[5.417696] (-) TimerEvent: {}
+[5.518085] (-) TimerEvent: {}
+[5.555570] (turtle_race) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/turtle_race/src/draw_node.cpp:111:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[5.555797] (turtle_race) StderrLine: {'line': b'  111 | }\n'}
+[5.555853] (turtle_race) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.555903] (turtle_race) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/turtle_race/src/draw_node.cpp:70:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.555955] (turtle_race) StderrLine: {'line': b'   70 | \x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[5.556071] (turtle_race) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.560523] (turtle_race) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/turtle_race/src/draw_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KDrawNode::DrawNode()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.560657] (turtle_race) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/turtle_race/src/draw_node.cpp:74:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktimer_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktimer_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.560724] (turtle_race) StderrLine: {'line': b'   74 |         \x1b[01;31m\x1b[Ktimer_\x1b[m\x1b[K = this->create_wall_timer(std::chrono::milliseconds(200), std::bind(&DrawNode::loop, this));\n'}
+[5.560781] (turtle_race) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[5.560834] (turtle_race) StderrLine: {'line': b'      |         \x1b[32m\x1b[Ktimer_t\x1b[m\x1b[K\n'}
+[5.571808] (turtle_race) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/turtle_race/src/draw_node.cpp:75:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcmd_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.572027] (turtle_race) StderrLine: {'line': b'   75 |         \x1b[01;31m\x1b[Kcmd_pub_\x1b[m\x1b[K = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);\n'}
+[5.572095] (turtle_race) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.579859] (turtle_race) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/turtle_race/src/draw_node.cpp:79:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstep_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.580041] (turtle_race) StderrLine: {'line': b'   79 |         \x1b[01;31m\x1b[Kstep_\x1b[m\x1b[K = 0;\n'}
+[5.580108] (turtle_race) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.583646] (turtle_race) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/turtle_race/src/draw_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid DrawNode::loop()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.583816] (turtle_race) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/turtle_race/src/draw_node.cpp:87:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstep_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.583874] (turtle_race) StderrLine: {'line': b'   87 |        if(\x1b[01;31m\x1b[Kstep_\x1b[m\x1b[K < 2){\n'}
+[5.583939] (turtle_race) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.588042] (turtle_race) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/turtle_race/src/draw_node.cpp:96:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcmd_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.588232] (turtle_race) StderrLine: {'line': b'   96 |         \x1b[01;31m\x1b[Kcmd_pub_\x1b[m\x1b[K->publish(cmd_msg);\n'}
+[5.588344] (turtle_race) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.590640] (turtle_race) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/turtle_race/src/draw_node.cpp:102:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kstep_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.590821] (turtle_race) StderrLine: {'line': b'  102 |     int \x1b[01;35m\x1b[Kstep_\x1b[m\x1b[K = 0;\n'}
+[5.590881] (turtle_race) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.594381] (turtle_race) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/turtle_race/src/draw_node.cpp:\x1b[m\x1b[K At global scope:\n'}
+[5.594589] (turtle_race) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/turtle_race/src/draw_node.cpp:111:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id at end of input\n'}
+[5.594658] (turtle_race) StderrLine: {'line': b'  111 | }\n'}
+[5.594718] (turtle_race) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.618230] (-) TimerEvent: {}
+[5.718636] (-) TimerEvent: {}
+[5.819037] (-) TimerEvent: {}
+[5.919496] (-) TimerEvent: {}
+[6.019870] (-) TimerEvent: {}
+[6.120281] (-) TimerEvent: {}
+[6.136825] (turtle_race) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/draw_node.dir/build.make:76: CMakeFiles/draw_node.dir/src/draw_node.cpp.o] Error 1\n'}
+[6.137123] (turtle_race) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/draw_node.dir/all] Error 2\n'}
+[6.137297] (turtle_race) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[6.139445] (turtle_race) CommandEnded: {'returncode': 2}
+[6.174395] (turtle_race) JobEnded: {'identifier': 'turtle_race', 'rc': 2}
+[6.185163] (-) EventReactorShutdown: {}

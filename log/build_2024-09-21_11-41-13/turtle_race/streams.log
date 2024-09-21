@@ -1,0 +1,27 @@
+[0.010s] Invoking command in '/home/ajr/ros2_ws/src/turtle_race/build/turtle_race': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake --build /home/ajr/ros2_ws/src/turtle_race/build/turtle_race -- -j16 -l16
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target draw_node[0m
+[0.053s] [ 50%] [32mBuilding CXX object CMakeFiles/draw_node.dir/src/draw_node.cpp.o[0m
+[3.303s] [100%] [32m[1mLinking CXX executable draw_node[0m
+[3.553s] [100%] Built target draw_node
+[3.561s] Invoked command in '/home/ajr/ros2_ws/src/turtle_race/build/turtle_race' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake --build /home/ajr/ros2_ws/src/turtle_race/build/turtle_race -- -j16 -l16
+[3.585s] Invoking command in '/home/ajr/ros2_ws/src/turtle_race/build/turtle_race': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake --install /home/ajr/ros2_ws/src/turtle_race/build/turtle_race
+[3.591s] -- Install configuration: ""
+[3.592s] -- Execute custom install script
+[3.592s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/lib/turtle_race/draw_node
+[3.593s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/launch/d_launch.py
+[3.593s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/ament_index/resource_index/package_run_dependencies/turtle_race
+[3.593s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/ament_index/resource_index/parent_prefix_path/turtle_race
+[3.594s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/environment/ament_prefix_path.sh
+[3.594s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/environment/ament_prefix_path.dsv
+[3.594s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/environment/path.sh
+[3.594s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/environment/path.dsv
+[3.594s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/local_setup.bash
+[3.594s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/local_setup.sh
+[3.594s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/local_setup.zsh
+[3.595s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/local_setup.dsv
+[3.595s] -- Symlinking: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/package.dsv
+[3.601s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/ament_index/resource_index/packages/turtle_race
+[3.601s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/cmake/turtle_raceConfig.cmake
+[3.601s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/cmake/turtle_raceConfig-version.cmake
+[3.601s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/turtle_race/install/turtle_race/share/turtle_race/package.xml
+[3.603s] Invoked command in '/home/ajr/ros2_ws/src/turtle_race/build/turtle_race' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake --install /home/ajr/ros2_ws/src/turtle_race/build/turtle_race

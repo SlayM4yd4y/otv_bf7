@@ -1,0 +1,1 @@
+/home/ajr/ros2_ws/src/turtle_race/build/turtle_race/ament_cmake_core/turtle_raceConfig-version.cmake
