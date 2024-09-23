@@ -1,6 +1,7 @@
 /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/draw_node
 /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/iranyitas
 /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/launch/d_launch.py
+/home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/billentyuzet.py
 /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/package_run_dependencies/otv_bf7
 /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/parent_prefix_path/otv_bf7
 /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/ament_prefix_path.sh

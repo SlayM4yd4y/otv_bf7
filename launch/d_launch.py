@@ -18,4 +18,9 @@ def generate_launch_description():
             executable='draw_node',
             output='screen',
         ),
+         Node(
+            package='otv_bf7',
+            executable='billentyuzet',
+            output='screen',
+        ),
     ])

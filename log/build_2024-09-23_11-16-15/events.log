@@ -1,0 +1,82 @@
+[0.000000] (-) TimerEvent: {}
+[0.000490] (otv_bf7) JobQueued: {'identifier': 'otv_bf7', 'dependencies': OrderedDict()}
+[0.000568] (otv_bf7) JobStarted: {'identifier': 'otv_bf7'}
+[0.010651] (otv_bf7) JobProgress: {'identifier': 'otv_bf7', 'progress': 'cmake'}
+[0.011308] (otv_bf7) JobProgress: {'identifier': 'otv_bf7', 'progress': 'build'}
+[0.012000] (otv_bf7) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7', '--', '-j16', '-l16'], 'cwd': '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ajr'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/home/ajr/ros2_ws/install/pid_library/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ajr'), ('OLDPWD', '/home/ajr/ros2_ws'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'ajr'), ('_colcon_cd_root', '/opt/ros/humble/'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ajr/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ajr'), ('NAME', 'Zephyrus'), ('WSL_INTEROP', '/run/WSL/18992_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/ajr/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.2.4.0_x64__8wekyb3d8bbwe:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/CodeBlocks:/mnt/c/Users/attil/OneDrive/Desktop/OTVOSATTILA_BF7RL1_1127_ETTEREMRBF/CMakeLists.txt:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/attil/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm 2023.3.2/bin:/mnt/c/Users/attil/.dotnet/tools:/mnt/c/Program Files/JetBrains/CLion 2023.3.3/bin:/mnt/c/Users/attil/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Azure Data Studio/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '73'), ('AMENT_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/otv_bf7:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7'), ('RCUTILS_COLORIZED_OUTPUT', '1'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ajr/ros2_ws/build/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_py/lib/python3.10/site-packages:/home/ajr/ros2_ws/build/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_py/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/otv_bf7:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_cpp:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[0.040434] (otv_bf7) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099430] (-) TimerEvent: {}
+[0.154427] (otv_bf7) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.199570] (-) TimerEvent: {}
+[0.285920] (otv_bf7) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.289798] (otv_bf7) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.297780] (otv_bf7) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.299643] (-) TimerEvent: {}
+[0.309602] (otv_bf7) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.324438] (otv_bf7) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.363740] (otv_bf7) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.366418] (otv_bf7) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.399784] (-) TimerEvent: {}
+[0.500153] (-) TimerEvent: {}
+[0.600480] (-) TimerEvent: {}
+[0.700864] (-) TimerEvent: {}
+[0.801217] (-) TimerEvent: {}
+[0.901576] (-) TimerEvent: {}
+[1.001931] (-) TimerEvent: {}
+[1.102270] (-) TimerEvent: {}
+[1.202624] (-) TimerEvent: {}
+[1.302953] (-) TimerEvent: {}
+[1.403272] (-) TimerEvent: {}
+[1.503631] (-) TimerEvent: {}
+[1.603988] (-) TimerEvent: {}
+[1.704322] (-) TimerEvent: {}
+[1.804667] (-) TimerEvent: {}
+[1.905021] (-) TimerEvent: {}
+[2.005430] (-) TimerEvent: {}
+[2.105782] (-) TimerEvent: {}
+[2.206119] (-) TimerEvent: {}
+[2.306471] (-) TimerEvent: {}
+[2.406813] (-) TimerEvent: {}
+[2.507144] (-) TimerEvent: {}
+[2.607492] (-) TimerEvent: {}
+[2.707820] (-) TimerEvent: {}
+[2.808164] (-) TimerEvent: {}
+[2.908521] (-) TimerEvent: {}
+[3.008863] (-) TimerEvent: {}
+[3.109208] (-) TimerEvent: {}
+[3.209550] (-) TimerEvent: {}
+[3.309881] (-) TimerEvent: {}
+[3.376391] (otv_bf7) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.410010] (-) TimerEvent: {}
+[3.434934] (otv_bf7) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[3.447601] (otv_bf7) StdoutLine: {'line': b'-- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[3.510132] (-) TimerEvent: {}
+[3.610459] (-) TimerEvent: {}
+[3.710806] (-) TimerEvent: {}
+[3.811132] (-) TimerEvent: {}
+[3.911450] (-) TimerEvent: {}
+[4.011786] (-) TimerEvent: {}
+[4.112121] (-) TimerEvent: {}
+[4.159329] (otv_bf7) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:14 (find_package):\n'}
+[4.159574] (otv_bf7) StderrLine: {'line': b'  By not providing "Findament_python.cmake" in CMAKE_MODULE_PATH this project\n'}
+[4.159641] (otv_bf7) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[4.159700] (otv_bf7) StderrLine: {'line': b'  "ament_python", but CMake did not find one.\n'}
+[4.159756] (otv_bf7) StderrLine: {'line': b'\n'}
+[4.159808] (otv_bf7) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_python" with\n'}
+[4.159857] (otv_bf7) StderrLine: {'line': b'  any of the following names:\n'}
+[4.159905] (otv_bf7) StderrLine: {'line': b'\n'}
+[4.159993] (otv_bf7) StderrLine: {'line': b'    ament_pythonConfig.cmake\n'}
+[4.160048] (otv_bf7) StderrLine: {'line': b'    ament_python-config.cmake\n'}
+[4.160099] (otv_bf7) StderrLine: {'line': b'\n'}
+[4.160150] (otv_bf7) StderrLine: {'line': b'  Add the installation prefix of "ament_python" to CMAKE_PREFIX_PATH or set\n'}
+[4.160201] (otv_bf7) StderrLine: {'line': b'  "ament_python_DIR" to a directory containing one of the above files.  If\n'}
+[4.160252] (otv_bf7) StderrLine: {'line': b'  "ament_python" provides a separate development package or SDK, be sure it\n'}
+[4.160293] (otv_bf7) StderrLine: {'line': b'  has been installed.\n'}
+[4.160332] (otv_bf7) StderrLine: {'line': b'\n'}
+[4.160370] (otv_bf7) StderrLine: {'line': b'\x1b[0m\n'}
+[4.160408] (otv_bf7) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[4.160454] (otv_bf7) StdoutLine: {'line': b'See also "/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7/CMakeFiles/CMakeOutput.log".\n'}
+[4.165262] (otv_bf7) StderrLine: {'line': b'gmake: *** [Makefile:308: cmake_check_build_system] Error 1\n'}
+[4.167011] (otv_bf7) CommandEnded: {'returncode': 2}
+[4.199621] (otv_bf7) JobEnded: {'identifier': 'otv_bf7', 'rc': 2}
+[4.210318] (-) EventReactorShutdown: {}

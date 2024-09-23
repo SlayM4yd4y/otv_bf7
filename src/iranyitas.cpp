@@ -68,3 +68,61 @@ int main(int argc, char * argv[])
     rclcpp::shutdown();
     return 0;
 }
+/*
+#include <rclcpp/rclcpp.hpp>
+#include <geometry_msgs/msg/twist.hpp>
+#include <std_msgs/msg/string.hpp>
+
+class TeleopTurtle : public rclcpp::Node
+{
+public:
+    TeleopTurtle() : Node("teleop_turtle")
+    {
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
+        subscription_ = this->create_subscription<std_msgs::msg::String>(
+            "key_press", 10, std::bind(&TeleopTurtle::key_callback, this, std::placeholders::_1));
+        RCLCPP_INFO(this->get_logger(), "Használja a 'w', 'a', 's', 'd' billentyűket az irányításhoz. Kilépéshez nyomja meg a 'q' billentyűt.");
+    }
+
+private:
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
+    rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscription_;
+
+    void key_callback(const std_msgs::msg::String::SharedPtr msg)
+    {
+        auto twist = geometry_msgs::msg::Twist();
+        char c = msg->data[0];
+
+        switch (c)
+        {
+            case 'w':
+                twist.linear.x = 0.8;
+                break;
+            case 's':
+                twist.linear.x = -0.8;
+                break;
+            case 'a':
+                twist.angular.z = 0.8;
+                break;
+            case 'd':
+                twist.angular.z = -0.8;
+                break;
+            case 'q':
+                rclcpp::shutdown();
+                break;
+            default:
+                twist.linear.x = 0.0;
+                twist.angular.z = 0.0;
+        }
+
+        publisher_->publish(twist);
+    }
+};
+
+int main(int argc, char * argv[])
+{
+    rclcpp::init(argc, argv);
+    rclcpp::spin(std::make_shared<TeleopTurtle>());
+    rclcpp::shutdown();
+    return 0;
+}*/

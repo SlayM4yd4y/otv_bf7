@@ -1,0 +1,44 @@
+[0.008s] Invoking command in '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7 -- -j16 -l16
+[0.023s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.102s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.188s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.190s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.194s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.200s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.208s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.229s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.230s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.168s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.206s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[3.215s] -- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+[3.259s] -- Configuring done
+[3.268s] -- Generating done
+[3.269s] -- Build files have been written to: /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7
+[3.287s] [35m[1mConsolidate compiler generated dependencies of target draw_node[0m
+[3.287s] [35m[1mConsolidate compiler generated dependencies of target iranyitas[0m
+[3.301s] [100%] Built target iranyitas
+[3.301s] [100%] Built target draw_node
+[3.309s] Invoked command in '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7 -- -j16 -l16
+[3.335s] Invoking command in '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7
+[3.338s] -- Install configuration: ""
+[3.338s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/draw_node
+[3.339s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/iranyitas
+[3.340s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/launch
+[3.340s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/launch/d_launch.py
+[3.340s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/billentyuzet.py
+[3.340s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/package_run_dependencies/otv_bf7
+[3.340s] -- Installing: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/parent_prefix_path/otv_bf7
+[3.340s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/ament_prefix_path.sh
+[3.340s] -- Installing: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/ament_prefix_path.dsv
+[3.340s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/path.sh
+[3.340s] -- Installing: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/path.dsv
+[3.340s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.bash
+[3.340s] -- Installing: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.sh
+[3.341s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.zsh
+[3.341s] -- Installing: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.dsv
+[3.341s] -- Installing: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/package.dsv
+[3.341s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/packages/otv_bf7
+[3.341s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/cmake/otv_bf7Config.cmake
+[3.341s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/cmake/otv_bf7Config-version.cmake
+[3.341s] -- Up-to-date: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/package.xml
+[3.342s] Invoked command in '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7
