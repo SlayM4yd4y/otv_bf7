@@ -1,2 +1,0 @@
-Invoking command in '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7 -- -j16 -l16
-Invoked command in '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7 -- -j16 -l16

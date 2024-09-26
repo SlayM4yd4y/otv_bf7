@@ -1,0 +1,205 @@
+[0.000000] (-) TimerEvent: {}
+[0.000138] (otv_bf7) JobQueued: {'identifier': 'otv_bf7', 'dependencies': OrderedDict()}
+[0.000328] (otv_bf7) JobStarted: {'identifier': 'otv_bf7'}
+[0.011910] (otv_bf7) JobProgress: {'identifier': 'otv_bf7', 'progress': 'cmake'}
+[0.012130] (otv_bf7) Command: {'cmd': ['/usr/bin/cmake', '/home/ajr/ros2_ws/src/otv_bf7', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7'], 'cwd': '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ajr'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/home/ajr/ros2_ws/install/pid_library/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{3ad42e7b-e073-5f3e-ac57-1c259ffa86a8}'), ('HOME', '/home/ajr'), ('OLDPWD', '/home/ajr/ros2_ws'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'ajr'), ('_colcon_cd_root', '/opt/ros/humble/'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ajr/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ajr'), ('NAME', 'Zephyrus'), ('WSL_INTEROP', '/run/WSL/353_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/ajr/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/CodeBlocks:/mnt/c/Users/attil/OneDrive/Desktop/OTVOSATTILA_BF7RL1_1127_ETTEREMRBF/CMakeLists.txt:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/attil/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm 2023.3.2/bin:/mnt/c/Users/attil/.dotnet/tools:/mnt/c/Program Files/JetBrains/CLion 2023.3.3/bin:/mnt/c/Users/attil/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Azure Data Studio/bin:/snap/bin'), ('WT_SESSION', '32726455-7f8f-4dec-81ca-e59454e25bb5'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '73'), ('AMENT_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/otv_bf7:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7'), ('RCUTILS_COLORIZED_OUTPUT', '1'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ajr/ros2_ws/build/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_py/lib/python3.10/site-packages:/home/ajr/ros2_ws/build/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_py/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/otv_bf7:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_cpp:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.099385] (-) TimerEvent: {}
+[0.199703] (-) TimerEvent: {}
+[0.228695] (otv_bf7) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.299824] (-) TimerEvent: {}
+[0.400152] (-) TimerEvent: {}
+[0.500480] (-) TimerEvent: {}
+[0.600807] (-) TimerEvent: {}
+[0.607958] (otv_bf7) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.700929] (-) TimerEvent: {}
+[0.801258] (-) TimerEvent: {}
+[0.868713] (otv_bf7) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.901385] (-) TimerEvent: {}
+[0.981157] (otv_bf7) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.986193] (otv_bf7) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.987255] (otv_bf7) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.988047] (otv_bf7) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.991705] (otv_bf7) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.001504] (-) TimerEvent: {}
+[1.101827] (-) TimerEvent: {}
+[1.105752] (otv_bf7) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.110941] (otv_bf7) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.111181] (otv_bf7) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.111459] (otv_bf7) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.140277] (otv_bf7) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.201937] (-) TimerEvent: {}
+[1.253821] (otv_bf7) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.302076] (-) TimerEvent: {}
+[1.310536] (otv_bf7) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.359310] (otv_bf7) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.402185] (-) TimerEvent: {}
+[1.502514] (-) TimerEvent: {}
+[1.524026] (otv_bf7) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.532156] (otv_bf7) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.545015] (otv_bf7) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.565225] (otv_bf7) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.588361] (otv_bf7) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.602626] (-) TimerEvent: {}
+[1.650164] (otv_bf7) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.654738] (otv_bf7) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.702744] (-) TimerEvent: {}
+[1.803100] (-) TimerEvent: {}
+[1.903471] (-) TimerEvent: {}
+[2.003853] (-) TimerEvent: {}
+[2.104210] (-) TimerEvent: {}
+[2.204560] (-) TimerEvent: {}
+[2.304921] (-) TimerEvent: {}
+[2.405260] (-) TimerEvent: {}
+[2.505595] (-) TimerEvent: {}
+[2.606009] (-) TimerEvent: {}
+[2.640206] (otv_bf7) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[2.706126] (-) TimerEvent: {}
+[2.806434] (-) TimerEvent: {}
+[2.906773] (-) TimerEvent: {}
+[3.007097] (-) TimerEvent: {}
+[3.107454] (-) TimerEvent: {}
+[3.207791] (-) TimerEvent: {}
+[3.308125] (-) TimerEvent: {}
+[3.408508] (-) TimerEvent: {}
+[3.508882] (-) TimerEvent: {}
+[3.605282] (otv_bf7) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[3.608966] (-) TimerEvent: {}
+[3.709241] (-) TimerEvent: {}
+[3.809559] (-) TimerEvent: {}
+[3.909946] (-) TimerEvent: {}
+[4.010298] (-) TimerEvent: {}
+[4.110647] (-) TimerEvent: {}
+[4.211042] (-) TimerEvent: {}
+[4.311390] (-) TimerEvent: {}
+[4.411722] (-) TimerEvent: {}
+[4.512091] (-) TimerEvent: {}
+[4.612443] (-) TimerEvent: {}
+[4.712877] (-) TimerEvent: {}
+[4.813227] (-) TimerEvent: {}
+[4.913610] (-) TimerEvent: {}
+[5.013960] (-) TimerEvent: {}
+[5.114342] (-) TimerEvent: {}
+[5.211858] (otv_bf7) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[5.214412] (-) TimerEvent: {}
+[5.226004] (otv_bf7) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[5.314538] (-) TimerEvent: {}
+[5.339214] (otv_bf7) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[5.339502] (otv_bf7) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[5.414661] (-) TimerEvent: {}
+[5.436934] (otv_bf7) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[5.437725] (otv_bf7) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[5.503047] (otv_bf7) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[5.514773] (-) TimerEvent: {}
+[5.520176] (otv_bf7) StdoutLine: {'line': b'-- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[5.523115] (otv_bf7) StdoutLine: {'line': b'-- Found turtlesim: 1.4.2 (/opt/ros/humble/share/turtlesim/cmake)\n'}
+[5.614905] (-) TimerEvent: {}
+[5.625292] (otv_bf7) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.638388] (otv_bf7) StdoutLine: {'line': b'-- Generating done\n'}
+[5.639604] (otv_bf7) StdoutLine: {'line': b'-- Build files have been written to: /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7\n'}
+[5.647384] (otv_bf7) CommandEnded: {'returncode': 0}
+[5.649091] (otv_bf7) JobProgress: {'identifier': 'otv_bf7', 'progress': 'build'}
+[5.649231] (otv_bf7) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7', '--', '-j16', '-l16'], 'cwd': '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ajr'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/home/ajr/ros2_ws/install/pid_library/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{3ad42e7b-e073-5f3e-ac57-1c259ffa86a8}'), ('HOME', '/home/ajr'), ('OLDPWD', '/home/ajr/ros2_ws'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'ajr'), ('_colcon_cd_root', '/opt/ros/humble/'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ajr/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ajr'), ('NAME', 'Zephyrus'), ('WSL_INTEROP', '/run/WSL/353_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/ajr/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/CodeBlocks:/mnt/c/Users/attil/OneDrive/Desktop/OTVOSATTILA_BF7RL1_1127_ETTEREMRBF/CMakeLists.txt:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/attil/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm 2023.3.2/bin:/mnt/c/Users/attil/.dotnet/tools:/mnt/c/Program Files/JetBrains/CLion 2023.3.3/bin:/mnt/c/Users/attil/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Azure Data Studio/bin:/snap/bin'), ('WT_SESSION', '32726455-7f8f-4dec-81ca-e59454e25bb5'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '73'), ('AMENT_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/otv_bf7:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7'), ('RCUTILS_COLORIZED_OUTPUT', '1'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ajr/ros2_ws/build/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_py/lib/python3.10/site-packages:/home/ajr/ros2_ws/build/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_py/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/otv_bf7:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_cpp:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[5.682977] (otv_bf7) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/iranyitas.dir/src/iranyitas.cpp.o\x1b[0m\n'}
+[5.683180] (otv_bf7) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/draw_node.dir/src/draw_node.cpp.o\x1b[0m\n'}
+[5.715019] (-) TimerEvent: {}
+[5.815346] (-) TimerEvent: {}
+[5.915705] (-) TimerEvent: {}
+[6.016080] (-) TimerEvent: {}
+[6.116469] (-) TimerEvent: {}
+[6.216849] (-) TimerEvent: {}
+[6.317213] (-) TimerEvent: {}
+[6.417551] (-) TimerEvent: {}
+[6.517929] (-) TimerEvent: {}
+[6.618305] (-) TimerEvent: {}
+[6.718699] (-) TimerEvent: {}
+[6.819144] (-) TimerEvent: {}
+[6.919548] (-) TimerEvent: {}
+[7.020019] (-) TimerEvent: {}
+[7.120386] (-) TimerEvent: {}
+[7.220748] (-) TimerEvent: {}
+[7.321100] (-) TimerEvent: {}
+[7.421472] (-) TimerEvent: {}
+[7.521819] (-) TimerEvent: {}
+[7.622195] (-) TimerEvent: {}
+[7.722577] (-) TimerEvent: {}
+[7.822929] (-) TimerEvent: {}
+[7.923308] (-) TimerEvent: {}
+[8.023700] (-) TimerEvent: {}
+[8.124114] (-) TimerEvent: {}
+[8.224488] (-) TimerEvent: {}
+[8.324871] (-) TimerEvent: {}
+[8.425245] (-) TimerEvent: {}
+[8.525591] (-) TimerEvent: {}
+[8.625933] (-) TimerEvent: {}
+[8.726297] (-) TimerEvent: {}
+[8.826699] (-) TimerEvent: {}
+[8.927027] (-) TimerEvent: {}
+[9.027359] (-) TimerEvent: {}
+[9.127745] (-) TimerEvent: {}
+[9.150209] (otv_bf7) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable iranyitas\x1b[0m\n'}
+[9.227886] (-) TimerEvent: {}
+[9.328283] (-) TimerEvent: {}
+[9.409655] (otv_bf7) StdoutLine: {'line': b'[ 75%] Built target iranyitas\n'}
+[9.428403] (-) TimerEvent: {}
+[9.528766] (-) TimerEvent: {}
+[9.629122] (-) TimerEvent: {}
+[9.729530] (-) TimerEvent: {}
+[9.829874] (-) TimerEvent: {}
+[9.930250] (-) TimerEvent: {}
+[10.030729] (-) TimerEvent: {}
+[10.131108] (-) TimerEvent: {}
+[10.231454] (-) TimerEvent: {}
+[10.331811] (-) TimerEvent: {}
+[10.432168] (-) TimerEvent: {}
+[10.532517] (-) TimerEvent: {}
+[10.632867] (-) TimerEvent: {}
+[10.733229] (-) TimerEvent: {}
+[10.833587] (-) TimerEvent: {}
+[10.933946] (-) TimerEvent: {}
+[11.034304] (-) TimerEvent: {}
+[11.134653] (-) TimerEvent: {}
+[11.235008] (-) TimerEvent: {}
+[11.335365] (-) TimerEvent: {}
+[11.435745] (-) TimerEvent: {}
+[11.536096] (-) TimerEvent: {}
+[11.636443] (-) TimerEvent: {}
+[11.736812] (-) TimerEvent: {}
+[11.837169] (-) TimerEvent: {}
+[11.937500] (-) TimerEvent: {}
+[12.037870] (-) TimerEvent: {}
+[12.138239] (-) TimerEvent: {}
+[12.238631] (-) TimerEvent: {}
+[12.309489] (otv_bf7) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable draw_node\x1b[0m\n'}
+[12.338771] (-) TimerEvent: {}
+[12.439122] (-) TimerEvent: {}
+[12.539488] (-) TimerEvent: {}
+[12.632627] (otv_bf7) StdoutLine: {'line': b'[100%] Built target draw_node\n'}
+[12.639601] (-) TimerEvent: {}
+[12.640974] (otv_bf7) CommandEnded: {'returncode': 0}
+[12.661289] (otv_bf7) JobProgress: {'identifier': 'otv_bf7', 'progress': 'install'}
+[12.666729] (otv_bf7) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7'], 'cwd': '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ajr'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/home/ajr/ros2_ws/install/pid_library/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{3ad42e7b-e073-5f3e-ac57-1c259ffa86a8}'), ('HOME', '/home/ajr'), ('OLDPWD', '/home/ajr/ros2_ws'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'ajr'), ('_colcon_cd_root', '/opt/ros/humble/'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ajr/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ajr'), ('NAME', 'Zephyrus'), ('WSL_INTEROP', '/run/WSL/353_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/ajr/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/CodeBlocks:/mnt/c/Users/attil/OneDrive/Desktop/OTVOSATTILA_BF7RL1_1127_ETTEREMRBF/CMakeLists.txt:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/attil/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/attil/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm 2023.3.2/bin:/mnt/c/Users/attil/.dotnet/tools:/mnt/c/Program Files/JetBrains/CLion 2023.3.3/bin:/mnt/c/Users/attil/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Azure Data Studio/bin:/snap/bin'), ('WT_SESSION', '32726455-7f8f-4dec-81ca-e59454e25bb5'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '73'), ('AMENT_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/otv_bf7:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7'), ('RCUTILS_COLORIZED_OUTPUT', '1'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ajr/ros2_ws/build/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_py/lib/python3.10/site-packages:/home/ajr/ros2_ws/build/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_py/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/otv_bf7:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_cpp:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[12.672386] (otv_bf7) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[12.672658] (otv_bf7) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[12.673349] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/draw_node\n'}
+[12.679021] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/iranyitas\n'}
+[12.684932] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/launch/d_launch.py\n'}
+[12.690658] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/billentyuzet.py\n'}
+[12.696568] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/package_run_dependencies/otv_bf7\n'}
+[12.702107] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/parent_prefix_path/otv_bf7\n'}
+[12.707606] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/ament_prefix_path.sh\n'}
+[12.712805] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/ament_prefix_path.dsv\n'}
+[12.717927] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/path.sh\n'}
+[12.723308] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/path.dsv\n'}
+[12.728935] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.bash\n'}
+[12.734340] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.sh\n'}
+[12.739710] (-) TimerEvent: {}
+[12.740216] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.zsh\n'}
+[12.746105] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.dsv\n'}
+[12.751873] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/package.dsv\n'}
+[12.757889] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/packages/otv_bf7\n'}
+[12.764352] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/cmake/otv_bf7Config.cmake\n'}
+[12.770798] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/cmake/otv_bf7Config-version.cmake\n'}
+[12.776953] (otv_bf7) StdoutLine: {'line': b'-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/package.xml\n'}
+[12.783575] (otv_bf7) CommandEnded: {'returncode': 0}
+[12.823210] (otv_bf7) JobEnded: {'identifier': 'otv_bf7', 'rc': 0}
+[12.824013] (-) EventReactorShutdown: {}

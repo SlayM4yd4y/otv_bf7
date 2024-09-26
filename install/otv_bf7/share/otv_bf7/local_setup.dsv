@@ -1,2 +1,1 @@
-source;share/otv_bf7/environment/ament_prefix_path.sh
-source;share/otv_bf7/environment/path.sh
+/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7/ament_cmake_environment_hooks/local_setup.dsv

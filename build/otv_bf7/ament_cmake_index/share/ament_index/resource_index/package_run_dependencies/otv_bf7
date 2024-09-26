@@ -1,1 +1,1 @@
-rclcpp;geometry_msgs;std_msgs;python3;keyboard;ament_lint_auto;ament_lint_common
+rclcpp;geometry_msgs;std_msgs;python3;keyboard;turtlesim;ament_lint_auto;ament_lint_common

@@ -1,0 +1,70 @@
+[0.015s] Invoking command in '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake /home/ajr/ros2_ws/src/otv_bf7 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7
+[0.228s] -- The C compiler identification is GNU 11.4.0
+[0.607s] -- The CXX compiler identification is GNU 11.4.0
+[0.868s] -- Detecting C compiler ABI info
+[0.981s] -- Detecting C compiler ABI info - done
+[0.986s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.987s] -- Detecting C compile features
+[0.987s] -- Detecting C compile features - done
+[0.991s] -- Detecting CXX compiler ABI info
+[1.105s] -- Detecting CXX compiler ABI info - done
+[1.110s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.111s] -- Detecting CXX compile features
+[1.111s] -- Detecting CXX compile features - done
+[1.140s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.253s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.310s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.359s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[1.524s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.532s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.545s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.565s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.588s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.650s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.654s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.640s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.605s] -- Found FastRTPS: /opt/ros/humble/include  
+[5.211s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.226s] -- Looking for pthread.h
+[5.339s] -- Looking for pthread.h - found
+[5.339s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[5.436s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[5.437s] -- Found Threads: TRUE  
+[5.503s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[5.520s] -- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+[5.523s] -- Found turtlesim: 1.4.2 (/opt/ros/humble/share/turtlesim/cmake)
+[5.625s] -- Configuring done
+[5.638s] -- Generating done
+[5.639s] -- Build files have been written to: /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7
+[5.647s] Invoked command in '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake /home/ajr/ros2_ws/src/otv_bf7 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7
+[5.649s] Invoking command in '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake --build /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7 -- -j16 -l16
+[5.683s] [ 50%] [32mBuilding CXX object CMakeFiles/iranyitas.dir/src/iranyitas.cpp.o[0m
+[5.683s] [ 50%] [32mBuilding CXX object CMakeFiles/draw_node.dir/src/draw_node.cpp.o[0m
+[9.150s] [ 75%] [32m[1mLinking CXX executable iranyitas[0m
+[9.409s] [ 75%] Built target iranyitas
+[12.309s] [100%] [32m[1mLinking CXX executable draw_node[0m
+[12.632s] [100%] Built target draw_node
+[12.641s] Invoked command in '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake --build /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7 -- -j16 -l16
+[12.667s] Invoking command in '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake --install /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7
+[12.672s] -- Install configuration: ""
+[12.672s] -- Execute custom install script
+[12.673s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/draw_node
+[12.679s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/iranyitas
+[12.684s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/launch/d_launch.py
+[12.690s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/billentyuzet.py
+[12.696s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/package_run_dependencies/otv_bf7
+[12.702s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/parent_prefix_path/otv_bf7
+[12.707s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/ament_prefix_path.sh
+[12.712s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/ament_prefix_path.dsv
+[12.717s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/path.sh
+[12.723s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/path.dsv
+[12.728s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.bash
+[12.734s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.sh
+[12.740s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.zsh
+[12.746s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.dsv
+[12.751s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/package.dsv
+[12.757s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/packages/otv_bf7
+[12.764s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/cmake/otv_bf7Config.cmake
+[12.770s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/cmake/otv_bf7Config-version.cmake
+[12.776s] -- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/package.xml
+[12.783s] Invoked command in '/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake --install /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7
