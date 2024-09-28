@@ -162,7 +162,8 @@ public:
         pose_sub_ = this->create_subscription<turtlesim::msg::Pose>(
             "/turtle1/pose", 10, std::bind(&TurtleSvgDrawer::pose_callback, this, std::placeholders::_1));
         timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&TurtleSvgDrawer::draw, this));
-        svg_file_path_ = "/home/ajr/ros2_ws/src/otv_bf7/img/race_track_outline.svg"; 
+        //svg_file_path_ = "/home/ajr/ros2_ws/src/otv_bf7/img/race_track_outline.svg"; 
+        svg_file_path_ = "/home/ajr/ros2_ws/src/otv_bf7/img/track.svg";
         waypoints_ = parse_svg_path(svg_file_path_);
         waypoint_index_ = 0;
 
@@ -210,13 +211,13 @@ private:
                 std::stringstream ss(path_data);
                 char command;
                 double x, y;
-
+                double scale_factor = 1.0;
                 while (ss >> command)
                 {
                     if (command == 'M' || command == 'L') 
                     {
                         ss >> x >> y;
-                        coordinates.emplace_back(x, y);
+                        coordinates.emplace_back(x * scale_factor, y * scale_factor);
                     }
                 }
 
@@ -269,7 +270,7 @@ private:
         twist_msg.angular.z = (target_theta - current_theta) * 2.0; 
 
         cmd_pub_->publish(twist_msg);
-        if (distance < 0.1) waypoint_index_++;
+        if (distance < 0.5) waypoint_index_++;
     }
 };
 
