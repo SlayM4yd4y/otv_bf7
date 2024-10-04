@@ -1,287 +1,87 @@
-/*#include <rclcpp/rclcpp.hpp>
-#include <geometry_msgs/msg/twist.hpp>
-#include <turtlesim/msg/pose.hpp>  
-#include <fstream>
-#include <sstream>
-#include <vector>
-#include <string>
-#include <cmath> 
+#include "rclcpp/rclcpp.hpp"
+#include "geometry_msgs/msg/twist.hpp"
+#include "turtlesim/srv/set_pen.hpp"
+#include "turtlesim/srv/teleport_absolute.hpp"
+#include <chrono>
 
-class TurtleSvgDrawer : public rclcpp::Node
+using namespace std::chrono_literals;
+
+class DrawNode : public rclcpp::Node
 {
-public:
-    TurtleSvgDrawer() : Node("draw_node")
-    {
-        cmd_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
-        pose_sub_ = this->create_subscription<turtlesim::msg::Pose>(
-            "/turtle1/pose", 10, std::bind(&TurtleSvgDrawer::pose_callback, this, std::placeholders::_1));
-        timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&TurtleSvgDrawer::draw, this));
-        svg_file_path_ = "/home/ajr/ros2_ws/src/otv_bf7/img/race_track_outline.svg"; 
-        waypoints_ = parse_svg_path(svg_file_path_);
-        waypoint_index_ = 0;
-
-        if (waypoints_.empty()) {
-            RCLCPP_ERROR(this->get_logger(), "No waypoints extracted from the SVG file.");
-        } else {
-            RCLCPP_INFO(this->get_logger(), "Successfully loaded %ld waypoints.", waypoints_.size());
-        }
-
-        current_pose_received_ = false;
-    }
-
 private:
-    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_pub_;
-    rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr pose_sub_;
+    void set_pen(bool enable)
+    {
+        auto request = std::make_shared<turtlesim::srv::SetPen::Request>();
+        request->r = 235; request->g = 237; request->b = 22; request->width = 5; request->off = !enable;
+        auto result = set_pen_client_->async_send_request(request);
+        if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), result) != rclcpp::FutureReturnCode::SUCCESS) {
+            RCLCPP_ERROR(this->get_logger(), "Set_pen hiba.");
+        }
+    }
+    void draw_square()
+    {
+        if (move_index_ < directions_.size())
+        {
+            auto twist_msg = geometry_msgs::msg::Twist();
+            if (move_index_ % 2 == 0) {twist_msg.linear.x = directions_[move_index_].first;}
+            else {twist_msg.angular.z = directions_[move_index_].second;}
+            pub_->publish(twist_msg);
+        }
+        else
+        {
+            auto stop_msg = geometry_msgs::msg::Twist();
+            pub_->publish(stop_msg);
+            RCLCPP_INFO(this->get_logger(), "A pálya rajzolása befejeződött.");
+            rclcpp::shutdown();
+        }
+        move_index_++;
+    }
+protected:
+    rclcpp::Client<turtlesim::srv::SetPen>::SharedPtr set_pen_client_;
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_;
     rclcpp::TimerBase::SharedPtr timer_;
-    std::string svg_file_path_;
-    std::vector<std::pair<double, double>> waypoints_;
-    size_t waypoint_index_;
-
-    turtlesim::msg::Pose current_pose_;
-    bool current_pose_received_;
-
-    std::vector<std::pair<double, double>> parse_svg_path(const std::string &svg_file)
+    int move_index_;
+    std::vector<std::pair<double, double>> directions_;
+public:
+    DrawNode() : Node("draw_node")
     {
-        std::vector<std::pair<double, double>> coordinates;
-        std::ifstream file(svg_file);
-        
-        if (!file.is_open())
-        {
-            RCLCPP_ERROR(this->get_logger(), "Failed to open SVG file");
-            return coordinates;
+        set_pen_client_ = this->create_client<turtlesim::srv::SetPen>("/turtle1/set_pen");
+        pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
+        move_index_ = 0;
+        directions_ = {
+            {4.0, 0.0},    // Jobbra (4 egységet előre)
+            {0.0, M_PI_2}, // 90 fokos fordulat (fel)
+            {4.0, 0.0},    // Fel (4 egységet előre)
+            {0.0, M_PI_2}, // 90 fokos fordulat (balra)
+            {4.0, 0.0},    // Balra (4 egységet előre)
+            {0.0, M_PI_2}, // 90 fokos fordulat (le)
+            {4.0, 0.0},    // Le (4 egységet előre)
+            {0.0, M_PI_2}  // 90 fokos fordulat (jobbra)
+        };
+        set_pen(false);
+        auto teleport_client = this->create_client<turtlesim::srv::TeleportAbsolute>("/turtle1/teleport_absolute");
+        auto teleport_request = std::make_shared<turtlesim::srv::TeleportAbsolute::Request>();
+        teleport_request->x = 1.0; teleport_request->y = 1.0; teleport_request->theta = 0.0;
+        while (!teleport_client->wait_for_service(5s) ||
+               !set_pen_client_->wait_for_service(3s) ) {
+            RCLCPP_INFO(this->get_logger(), "Varakozas a turtlesim szolgaltatasra...\n:>>set_pen\n>>teleport_absolute\n");
         }
-
-        std::string line;
-        while (std::getline(file, line))
-        {
-    
-            size_t d_pos = line.find("d=");
-            if (d_pos != std::string::npos)
-            {
-                size_t start = line.find('"', d_pos);
-                size_t end = line.find('"', start + 1);
-                std::string path_data = line.substr(start + 1, end - start - 1);
-
-                std::stringstream ss(path_data);
-                char command;
-                double x, y;
-
-                while (ss >> command >> x >> y)
-                {
-                    if (command == 'M' || command == 'L') 
-                    {
-                        coordinates.emplace_back(x, y);
-                    }
-                }
-
-                break; 
-            }
+        auto teleport_future = teleport_client->async_send_request(teleport_request);
+        auto result = rclcpp::spin_until_future_complete(this->get_node_base_interface(), teleport_future);
+        if (result == rclcpp::FutureReturnCode::SUCCESS) {
+            RCLCPP_INFO(this->get_logger(), "Sikeres teleportáció.");
+        } else {
+            RCLCPP_ERROR(this->get_logger(), "Teleportációs hiba.");
         }
-
-        file.close();
-        return coordinates;
-    }
-
-    void pose_callback(const turtlesim::msg::Pose::SharedPtr msg)
-    {
-        current_pose_ = *msg;
-        current_pose_received_ = true;
-    }
-
-    double calculate_distance(double x1, double y1, double x2, double y2)
-    {
-        return std::sqrt(std::pow(x2 - x1, 2) + std::pow(y2 - y1, 2));
-    }
-
-    void draw()
-    {
-        if (!current_pose_received_)
-        {
-            RCLCPP_INFO(this->get_logger(), "Waiting for turtle's current pose...");
-            return;  // addig ne rajzoljon, amíg nem kapott pozíciót (remelhetoleg)
-        }
-
-        if (waypoint_index_ >= waypoints_.size())
-        {
-            RCLCPP_INFO(this->get_logger(), "Drawing completed.");
-            return;
-        }
-
-
-        auto [target_x, target_y] = waypoints_[waypoint_index_];
-
-    
-        double current_x = current_pose_.x;
-        double current_y = current_pose_.y;
-        double current_theta = current_pose_.theta;
-
-        double dx = target_x - current_x;
-        double dy = target_y - current_y;
-        double distance = calculate_distance(current_x, current_y, target_x, target_y);
-        double target_theta = std::atan2(dy, dx);
-
-        geometry_msgs::msg::Twist twist_msg;
-        twist_msg.linear.x = distance * 0.5;  
-
-
-        twist_msg.angular.z = (target_theta - current_theta) * 2.0; 
-
-        cmd_pub_->publish(twist_msg);
-        if (distance < 0.1)  waypoint_index_++;
-        
+        set_pen(true);
+        timer_ = this->create_wall_timer(1s, std::bind(&DrawNode::draw_square, this));
     }
 };
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
     rclcpp::init(argc, argv);
-    auto draw_node = std::make_shared<TurtleSvgDrawer>();
-    rclcpp::executors::SingleThreadedExecutor executor;
-    executor.add_node(draw_node);
-    executor.spin();
+    rclcpp::spin(std::make_shared<DrawNode>());
     rclcpp::shutdown();
-
-    return 0;
-}
-*/
-#include <rclcpp/rclcpp.hpp>
-#include <geometry_msgs/msg/twist.hpp>
-#include <turtlesim/msg/pose.hpp>  
-#include <fstream>
-#include <sstream>
-#include <vector>
-#include <string>
-#include <cmath> 
-
-class TurtleSvgDrawer : public rclcpp::Node
-{
-public:
-    TurtleSvgDrawer() : Node("draw_node")
-    {
-        cmd_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
-        pose_sub_ = this->create_subscription<turtlesim::msg::Pose>(
-            "/turtle1/pose", 10, std::bind(&TurtleSvgDrawer::pose_callback, this, std::placeholders::_1));
-        timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&TurtleSvgDrawer::draw, this));
-        //svg_file_path_ = "/home/ajr/ros2_ws/src/otv_bf7/img/race_track_outline.svg"; 
-        svg_file_path_ = "/home/ajr/ros2_ws/src/otv_bf7/img/track.svg";
-        waypoints_ = parse_svg_path(svg_file_path_);
-        waypoint_index_ = 0;
-
-        if (waypoints_.empty()) {
-            RCLCPP_ERROR(this->get_logger(), "No waypoints extracted from the SVG file.");
-        } else {
-            RCLCPP_INFO(this->get_logger(), "Successfully loaded %ld waypoints.", waypoints_.size());
-        }
-
-        current_pose_received_ = false;
-    }
-
-private:
-    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_pub_;
-    rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr pose_sub_;
-    rclcpp::TimerBase::SharedPtr timer_;
-    std::string svg_file_path_;
-    std::vector<std::pair<double, double>> waypoints_;
-    size_t waypoint_index_;
-
-    turtlesim::msg::Pose current_pose_;
-    bool current_pose_received_;
-
-    std::vector<std::pair<double, double>> parse_svg_path(const std::string &svg_file)
-    {
-        std::vector<std::pair<double, double>> coordinates;
-        std::ifstream file(svg_file);
-        
-        if (!file.is_open())
-        {
-            RCLCPP_ERROR(this->get_logger(), "Failed to open SVG file");
-            return coordinates;
-        }
-
-        std::string line;
-        while (std::getline(file, line))
-        {
-            size_t d_pos = line.find("d=");
-            if (d_pos != std::string::npos)
-            {
-                size_t start = line.find('"', d_pos);
-                size_t end = line.find('"', start + 1);
-                std::string path_data = line.substr(start + 1, end - start - 1);
-
-                std::stringstream ss(path_data);
-                char command;
-                double x, y;
-                double scale_factor = 1.0;
-                while (ss >> command)
-                {
-                    if (command == 'M' || command == 'L') 
-                    {
-                        ss >> x >> y;
-                        coordinates.emplace_back(x * scale_factor, y * scale_factor);
-                    }
-                }
-
-                break; 
-            }
-        }
-
-        file.close();
-        return coordinates;
-    }
-
-    void pose_callback(const turtlesim::msg::Pose::SharedPtr msg)
-    {
-        current_pose_ = *msg;
-        current_pose_received_ = true;
-    }
-
-    double calculate_distance(double x1, double y1, double x2, double y2)
-    {
-        return std::sqrt(std::pow(x2 - x1, 2) + std::pow(y2 - y1, 2));
-    }
-
-    void draw()
-    {
-        if (!current_pose_received_)
-        {
-            RCLCPP_INFO(this->get_logger(), "Waiting for turtle's current pose...");
-            return;  
-        }
-
-        if (waypoint_index_ >= waypoints_.size())
-        {
-            RCLCPP_INFO(this->get_logger(), "Drawing completed.");
-            return;
-        }
-
-        auto [target_x, target_y] = waypoints_[waypoint_index_];
-    
-        double current_x = current_pose_.x;
-        double current_y = current_pose_.y;
-        double current_theta = current_pose_.theta;
-
-        double dx = target_x - current_x;
-        double dy = target_y - current_y;
-        double distance = calculate_distance(current_x, current_y, target_x, target_y);
-        double target_theta = std::atan2(dy, dx);
-
-        geometry_msgs::msg::Twist twist_msg;
-        twist_msg.linear.x = distance * 0.5;  
-        twist_msg.angular.z = (target_theta - current_theta) * 2.0; 
-
-        cmd_pub_->publish(twist_msg);
-        if (distance < 0.5) waypoint_index_++;
-    }
-};
-
-int main(int argc, char *argv[])
-{
-    rclcpp::init(argc, argv);
-    auto draw_node = std::make_shared<TurtleSvgDrawer>();
-    rclcpp::executors::SingleThreadedExecutor executor;
-    executor.add_node(draw_node);
-    executor.spin();
-    rclcpp::shutdown();
-
     return 0;
 }

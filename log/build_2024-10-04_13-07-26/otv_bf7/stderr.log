@@ -1,0 +1,4 @@
+[01m[K/home/ajr/ros2_ws/src/otv_bf7/src/draw_node.cpp:[m[K In member function ‘[01m[Kvoid DrawNode::draw_square()[m[K’:
+[01m[K/home/ajr/ros2_ws/src/otv_bf7/src/draw_node.cpp:56:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<double, double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   56 |         if ([01;35m[Kmove_index_ < directions_.size()[m[K)
+      |             [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
