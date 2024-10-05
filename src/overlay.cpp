@@ -4,66 +4,63 @@
 #include <string>
 #include <opencv2/opencv.hpp>
 #include "rclcpp/rclcpp.hpp"
-#include "turtlesim/msg/pose.hpp"
 
 using namespace std::chrono_literals;
 
 class OverlayNode : public rclcpp::Node
 {
-public:
-    OverlayNode() : Node("overlay_node")
-    {
-        subscription_ = this->create_subscription<turtlesim::msg::Pose>(
-            "/turtle1/pose", 10, std::bind(&OverlayNode::listener_callback, this, std::placeholders::_1)
-        );
-        car_image_ = cv::imread("/home/ajr/ros2_ws/src/otv_bf7/img/car.png", cv::IMREAD_UNCHANGED);
-        if (car_image_.empty()) {
-            RCLCPP_ERROR(this->get_logger(), "Nem sikerült a kép betöltése (car.png)");
-        }
-        window_name_ = "Játékszabályzat";
-        cv::namedWindow(window_name_);
-    }
-
 private:
-    void listener_callback(const turtlesim::msg::Pose::SharedPtr msg)
+    void display_text()
     {
-        int turtle_x = static_cast<int>(msg->x * 10); 
-        int turtle_y = static_cast<int>(msg->y * 10); 
+        cv::Mat background(300, 600, CV_8UC3, cv::Scalar(255, 255, 255));
+        std::string text = "1.) lepes:\nros2 run otv_bf7 draw_node\n2.) lepes:\nros2 run otv_bf7 iranyitas\n\nA jatek celja:\nEljutni a startbol a celba.\nJo jatekot!\n\n Ezen ablak bezarasa:\n ESC billentyu";
+        int fontFace = cv::FONT_HERSHEY_SIMPLEX;
+        double fontScale = 0.6;
+        int thickness = 1;
 
-        int height = car_image_.rows; // Kép magassága
-        int width = car_image_.cols; // Kép szélessége
-
-        // Kép overlay
-        int overlay_x = turtle_x - width / 2;  // Kép középre helyezése
-        int overlay_y = turtle_y - height;  // Kép a teknős felett
-
-        // Ellenőrizzük, hogy a kép belefér-e az ablakba
-        if (overlay_x < 0) overlay_x = 0;
-        if (overlay_y < 0) overlay_y = 0;
-
-        // Háttér létrehozása
-        cv::Mat background(400, 400, CV_8UC3, cv::Scalar(255, 255, 255));  // Fehér háttér, majd képet is prob.
-
-        // Kép hozzáadása
-        if (overlay_x + width <= background.cols && overlay_y + height <= background.rows) {
-            car_image_.copyTo(background(cv::Rect(overlay_x, overlay_y, width, height)));
+        int baseline = 0; int y_offset = 30;  
+        std::istringstream text_stream(text);
+        std::string line;
+        while (std::getline(text_stream, line)) {
+            cv::Size textSize = cv::getTextSize(line, fontFace, fontScale, thickness, &baseline);
+            cv::Point textOrg((background.cols - textSize.width) / 2, y_offset);  
+            cv::putText(background, line, textOrg, fontFace, fontScale, cv::Scalar(0, 0, 0), thickness, 8);
+            y_offset += textSize.height + 10;  
         }
 
         cv::imshow(window_name_, background);
-        cv::waitKey(1);
+    }
+    
+protected:
+    std::string window_name_;
+
+public:
+    OverlayNode() : Node("overlay_node")
+    {
+        window_name_ = "Jatekszabalyzat";
+        cv::namedWindow(window_name_);
     }
 
-    rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr subscription_;
-    cv::Mat car_image_;
-    std::string window_name_;
+    void run()
+    {
+        while (rclcpp::ok()) {
+            display_text();
+            int key = cv::waitKey(1);  
+            if (key == 27) {  
+                break; 
+            }
+            if (cv::getWindowProperty(window_name_, cv::WND_PROP_VISIBLE) == 0) {
+                break;  
+            }
+        }
+    }
 };
 
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
     auto overlay_node = std::make_shared<OverlayNode>();
-    
-    rclcpp::spin(overlay_node);
+    overlay_node->run(); 
     rclcpp::shutdown();
     return 0;
 }
