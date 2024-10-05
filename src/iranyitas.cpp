@@ -1,14 +1,13 @@
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/twist.hpp>
+#include "turtlesim/srv/set_pen.hpp"
+#include "turtlesim/srv/teleport_absolute.hpp"
 #include <termios.h>
 #include <unistd.h>
 
 class Iranyitas : public rclcpp::Node
 {
 private:
-    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
-    rclcpp::TimerBase::SharedPtr timer_;
-
     char getKey()
     {
         struct termios oldt, newt;
@@ -21,6 +20,11 @@ private:
         tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
         return c;
     }
+
+protected:
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
+    rclcpp::TimerBase::SharedPtr timer_;
+
 public:
     Iranyitas() : Node("teleop_turtle")
     {
@@ -28,11 +32,12 @@ public:
         timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&Iranyitas::timer_callback, this));
         RCLCPP_INFO(this->get_logger(), "Használja a 'w', 'a', 's', 'd' billentyűket az irányításhoz. Kilépéshez nyomja meg a 'q' billentyűt.");
     }
+
     void timer_callback()
     {
         auto twist = geometry_msgs::msg::Twist();
         char c = getKey();
-        
+
         switch (c)
         {
             case 'w':
@@ -57,6 +62,7 @@ public:
         publisher_->publish(twist);
     }
 };
+
 int main(int argc, char * argv[])
 {
     rclcpp::init(argc, argv);

@@ -18,7 +18,7 @@ private:
             RCLCPP_ERROR(this->get_logger(), "Set_pen hiba.");
         }
     }
-    void draw_square()
+    void draw_track()
     {
         if (move_index_ != directions_.size())
         {
@@ -81,7 +81,7 @@ public:
             RCLCPP_ERROR(this->get_logger(), "Teleportációs hiba.");
         }
         set_pen(true);
-        timer_ = this->create_wall_timer(1s, std::bind(&DrawNode::draw_square, this));
+        timer_ = this->create_wall_timer(1s, std::bind(&DrawNode::draw_track, this));
     }
 };
 
