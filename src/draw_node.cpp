@@ -20,21 +20,24 @@ private:
     }
     void draw_square()
     {
-        if (move_index_ < directions_.size())
+        if (move_index_ != directions_.size())
         {
             auto twist_msg = geometry_msgs::msg::Twist();
-            if (move_index_ % 2 == 0) {twist_msg.linear.x = directions_[move_index_].first;}
-            else {twist_msg.angular.z = directions_[move_index_].second;}
+            twist_msg.linear.x = directions_[move_index_].first;
+            twist_msg.angular.z = directions_[move_index_].second;
             pub_->publish(twist_msg);
+            move_index_++;
         }
         else
-        {
+        {   
             auto stop_msg = geometry_msgs::msg::Twist();
+            /*auto teleport_start = std::make_shared<turtlesim::srv::TeleportAbsolute::Request>();
+            teleport_start->x = 7.5; teleport_start->y = 5.5; //teleport_request->theta = M_PI;*/
             pub_->publish(stop_msg);
             RCLCPP_INFO(this->get_logger(), "A pálya rajzolása befejeződött.");
             rclcpp::shutdown();
         }
-        move_index_++;
+        
     }
 protected:
     rclcpp::Client<turtlesim::srv::SetPen>::SharedPtr set_pen_client_;
@@ -49,21 +52,25 @@ public:
         pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
         move_index_ = 0;
         directions_ = {
-            {4.0, 0.0},    // Jobbra (4 egységet előre)
-            {0.0, M_PI_2}, // 90 fokos fordulat (fel)
-            {4.0, 0.0},    // Fel (4 egységet előre)
-            {0.0, M_PI_2}, // 90 fokos fordulat (balra)
-            {4.0, 0.0},    // Balra (4 egységet előre)
-            {0.0, M_PI_2}, // 90 fokos fordulat (le)
-            {4.0, 0.0},    // Le (4 egységet előre)
-            {0.0, M_PI_2}  // 90 fokos fordulat (jobbra)
+            {8.0, 0.0}, {0.0, M_PI_2}, {3.0, 0.0}, {0.0, M_PI_2},
+            {7.0, 0.0}, {0.0, -M_PI_2}, {2.0, 0.0}, {0.0, -M_PI_2},
+            {4.0, 0.0}, {0.0, M_PI_2}, {3.0, 0.0}, {0.0, M_PI_2},
+            {4.0, 0.0}, {0.0, -M_PI}, {6.0, 0.0}, {0.0, -M_PI_2},
+            {3.0, 0.0}, {0.0, -M_PI_2}, {1.0, 0.0}, {0.0, M_PI_2},
+            {1.0, 0.0}, {0.0, M_PI_2}, {2.0, 0.0}, {0.0, M_PI_2},
+            {5.0, 0.0}, {0.0, M_PI_2}, {8.0, 0.0}, {0.0, M_PI_2}, 
+            {2.0, 0.0}, {0.0, M_PI_2}, {4.0, 0.0}, {0.0, -M_PI_2},
+            {1.0, 0.0}, {0.0, -M_PI_2}, {4.0, 0.0}, {0.0, M_PI_2},
+            {4.0, 0.0}, {0.0, M_PI_2}, {7.0, 0.0}, {0.0, -M_PI_2},
+            {1.0, 0.0}, {0.0, -M_PI_2}, {7.0, 0.0}, {0.0, M_PI_2},
+            {1.0, 0.0}, {0.0, 0.0},
         };
         set_pen(false);
         auto teleport_client = this->create_client<turtlesim::srv::TeleportAbsolute>("/turtle1/teleport_absolute");
         auto teleport_request = std::make_shared<turtlesim::srv::TeleportAbsolute::Request>();
         teleport_request->x = 1.0; teleport_request->y = 1.0; teleport_request->theta = 0.0;
         while (!teleport_client->wait_for_service(5s) ||
-               !set_pen_client_->wait_for_service(3s) ) {
+               !set_pen_client_->wait_for_service(5s) ) {
             RCLCPP_INFO(this->get_logger(), "Varakozas a turtlesim szolgaltatasra...\n:>>set_pen\n>>teleport_absolute\n");
         }
         auto teleport_future = teleport_client->async_send_request(teleport_request);

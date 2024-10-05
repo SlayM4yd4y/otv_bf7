@@ -20,7 +20,7 @@ def generate_launch_description():
         ),
          Node(
             package='otv_bf7',
-            executable='billentyuzet',
+            executable='overlay',
             output='screen',
         ),
     ])
