@@ -16,13 +16,11 @@ public:
         subscription_ = this->create_subscription<turtlesim::msg::Pose>(
             "/turtle1/pose", 10, std::bind(&OverlayNode::listener_callback, this, std::placeholders::_1)
         );
-        car_image_ = cv::imread("otv_bf7/img/car.png", cv::IMREAD_UNCHANGED);
+        car_image_ = cv::imread("/home/ajr/ros2_ws/src/otv_bf7/img/car.png", cv::IMREAD_UNCHANGED);
         if (car_image_.empty()) {
-            RCLCPP_ERROR(this->get_logger(), "Could not load car.png");
+            RCLCPP_ERROR(this->get_logger(), "Nem sikerült a kép betöltése (car.png)");
         }
-
-        // Megadjuk a TurtleSim ablak méretét
-        window_name_ = "TurtleSim Overlay";
+        window_name_ = "Játékszabályzat";
         cv::namedWindow(window_name_);
     }
 
