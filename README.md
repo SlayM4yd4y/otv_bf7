@@ -23,6 +23,7 @@ colcon build --packages-select otv_bf7 --symlink-install
 source ~/ros2_ws/install/setup.bash
 ```
 </details>
+
 Follow the order of instructions for optimal use:
 >To display the rules of the game in a new overlay window:
 ```
