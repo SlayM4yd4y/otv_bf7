@@ -24,15 +24,15 @@ source ~/ros2_ws/install/setup.bash
 ```
 </details>
 Follow the order of instructions for optimal use:
-> To display the rules of the game in a new overlay window:
+>To display the rules of the game in a new overlay window:
 ```
 1. ros2 run otv_bf7 overlay
 ```
-> To draw the track for the game
+>To draw the track for the game
 ```
 2. ros2 run otv_bf7 draw_node
 ```
-> To gain control over the turtle
+>To gain control over the turtle
 ```
 3. ros2 run otv_bf7 iranyitas
 ```
