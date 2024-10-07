@@ -1,61 +1,48 @@
 # `otv_bf7` ROS 2 package
 Built for a university class.
-## Build this ROS 2 package
-``` r
-cd ~/ros2_ws
-colcon build --packages-select turtle_race```
-
-## Packages and build
-
-It is assumed that the workspace is `~/ros2_ws/`.
-
 ### Clone the packages
-``` r
+>It is assumed that the workspace is `~/ros2_ws/`.
+``` 
 cd ~/ros2_ws/src
 ```
-``` r
+```
 git clone https://github.com/Sl4yM4yd4y/otv_bf7
 ```
-
-### Build ROS 2 packages
-``` r
+## Build this ROS 2 package
+>It is assumed that the workspace is still `~/ros2_ws/`.
+```
 cd ~/ros2_ws
 ```
-``` r
+```
 colcon build --packages-select otv_bf7 --symlink-install
 ```
-
+## Run this ROS 2 package
 <details>
 <summary> Don't forget to source before ROS commands.</summary>
-
-``` bash
+```
 source ~/ros2_ws/install/setup.bash
 ```
 </details>
-
-``` r
-ros2 launch ros2_cpp_template launch_example1.launch.py
+Follow the order of instructions for optimal use:
+> To display the rules of the game in a new overlay window:
 ```
+1. ros2 run otv_bf7 overlay
+```
+> To draw the track for the game
+```
+2. ros2 run otv_bf7 draw_node
+```
+> To gain control over the turtle
+```
+3. ros2 run otv_bf7 iranyitas
+```
+**If the turtle doesn't move with 'w','a','s','d' , split the screen, one side wsl/terminal, other side turtlesim, click into the terminal and try the movements again! **
 
-# Delete this part if you are using it as a template
+## Structure
 
-ROS 2 pacage template, to get started, use template by clicking on the Green button labeled [`Use this template`](https://github.com/sze-info/ros2_cpp_template/generate) / [`Create new repository`](https://github.com/sze-info/ros2_cpp_template/generate). 
-
-<p align="center"><img src="img/use_this_template01.png" width="60%" /></p>
+## Graph
 
 
-Let's assume 
-- your Github username is `mycoolusername`
-- your ROS 2 repo shold be `cool_ros2_package`
 
-Replace everything in the cloned repo:
 
-- `ros2_cpp_template` >> `cool_ros2_package` (the folder was already renamed after `Use this template`)
-- `sze-info` >> `mycoolusername`
-- find all `todo` strings and fill the blanks
 
-The easiest way is VS code:
-
-<p align="center"><img src="img/replace01.png" width="60%" /></p>
-
-Now `colcon build` your ROS 2 package and you can start wokring.
