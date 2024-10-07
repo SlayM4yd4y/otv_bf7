@@ -35,7 +35,7 @@ Follow the order of instructions for optimal use:
 ```
 3. ros2 run otv_bf7 iranyitas
 ```
-**If the turtle doesn't move with 'w','a','s','d' , split the screen, one side wsl/terminal, other side turtlesim, click into the terminal and try the movements again! **
+**If the turtle doesn't move with 'w','a','s','d' , split the screen, one side wsl/terminal, other side turtlesim, click into the terminal and try the movements again!**
 
 ## Structure
 
