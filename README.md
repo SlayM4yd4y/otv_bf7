@@ -19,9 +19,7 @@ colcon build --packages-select otv_bf7 --symlink-install
 ## Run this ROS 2 package
 <details>
 <summary> Don't forget to source before ROS commands.</summary>
-```
 source ~/ros2_ws/install/setup.bash
-```
 </details>
 
 Follow the order of instructions for optimal use:
