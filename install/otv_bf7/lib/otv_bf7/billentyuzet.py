@@ -1,1 +1,0 @@
-/home/ajr/ros2_ws/src/otv_bf7/src/billentyuzet.py

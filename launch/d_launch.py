@@ -18,9 +18,10 @@ def generate_launch_description():
             executable='draw_node',
             output='screen',
         ),
-         Node(
+        Node(
             package='otv_bf7',
             executable='overlay',
             output='screen',
         ),
+   
     ])
