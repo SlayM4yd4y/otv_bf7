@@ -316,11 +316,8 @@ include("/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7/ament_cmake_symlink_install
 # install("TARGETS" "iranyitas" "DESTINATION" "lib/otv_bf7")
 include("/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(DIRECTORY "launch" "DESTINATION" "share/otv_bf7")
-ament_cmake_symlink_install_directory("/home/ajr/ros2_ws/src/otv_bf7" DIRECTORY "launch" "DESTINATION" "share/otv_bf7")
-
-# install(PROGRAMS "src/billentyuzet.py" "DESTINATION" "lib/otv_bf7")
-ament_cmake_symlink_install_programs("/home/ajr/ros2_ws/src/otv_bf7" PROGRAMS "src/billentyuzet.py" "DESTINATION" "lib/otv_bf7")
+# install("TARGETS" "overlay" "DESTINATION" "lib/otv_bf7")
+include("/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/otv_bf7" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/ajr/ros2_ws/src/otv_bf7" FILES "/home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/otv_bf7" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

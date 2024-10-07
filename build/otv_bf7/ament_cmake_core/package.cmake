@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "otv_bf7")
 set(otv_bf7_VERSION "1.0.3")
-set(otv_bf7_MAINTAINER "he <attilaotvos8@gmail.com>")
+set(otv_bf7_MAINTAINER "he <attilaotvos8@g.com>")
 set(otv_bf7_BUILD_DEPENDS "turtlesim" "rclcpp" "geometry_msgs")
 set(otv_bf7_BUILDTOOL_DEPENDS "ament_cmake")
 set(otv_bf7_BUILD_EXPORT_DEPENDS "rclcpp" "geometry_msgs")

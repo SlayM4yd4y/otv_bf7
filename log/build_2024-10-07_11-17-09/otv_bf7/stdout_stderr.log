@@ -1,0 +1,53 @@
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+-- Found turtlesim: 1.4.2 (/opt/ros/humble/share/turtlesim/cmake)
+-- Found OpenCV: /usr (found version "4.5.4") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ajr/ros2_ws/src/otv_bf7/build/otv_bf7
+[35m[1mConsolidate compiler generated dependencies of target iranyitas[0m
+[35m[1mConsolidate compiler generated dependencies of target draw_node[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/overlay.dir/src/overlay.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/iranyitas.dir/src/iranyitas.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/draw_node.dir/src/draw_node.cpp.o[0m
+[01m[K/home/ajr/ros2_ws/src/otv_bf7/src/draw_node.cpp:[m[K In member function ‘[01m[Kvoid DrawNode::draw_track()[m[K’:
+[01m[K/home/ajr/ros2_ws/src/otv_bf7/src/draw_node.cpp:23:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<double, double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   23 |         if ([01;35m[Kmove_index_ != directions_.size()[m[K)
+      |             [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[ 66%] [32m[1mLinking CXX executable overlay[0m
+[ 83%] [32m[1mLinking CXX executable iranyitas[0m
+[ 83%] Built target iranyitas
+[ 83%] Built target overlay
+[100%] [32m[1mLinking CXX executable draw_node[0m
+[100%] Built target draw_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/draw_node
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/iranyitas
+-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/lib/otv_bf7/overlay
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/package_run_dependencies/otv_bf7
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/parent_prefix_path/otv_bf7
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/path.sh
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/environment/path.dsv
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.bash
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.sh
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.zsh
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/local_setup.dsv
+-- Symlinking: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/package.dsv
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/ament_index/resource_index/packages/otv_bf7
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/cmake/otv_bf7Config.cmake
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/cmake/otv_bf7Config-version.cmake
+-- Up-to-date symlink: /home/ajr/ros2_ws/src/otv_bf7/install/otv_bf7/share/otv_bf7/package.xml

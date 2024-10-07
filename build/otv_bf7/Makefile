@@ -223,6 +223,19 @@ iranyitas/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/iranyitas.dir/build.make CMakeFiles/iranyitas.dir/build
 .PHONY : iranyitas/fast
 
+#=============================================================================
+# Target rules for targets named overlay
+
+# Build rule for target.
+overlay: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 overlay
+.PHONY : overlay
+
+# fast build rule for target.
+overlay/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/overlay.dir/build.make CMakeFiles/overlay.dir/build
+.PHONY : overlay/fast
+
 src/draw_node.o: src/draw_node.cpp.o
 .PHONY : src/draw_node.o
 
@@ -271,6 +284,30 @@ src/iranyitas.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/iranyitas.dir/build.make CMakeFiles/iranyitas.dir/src/iranyitas.cpp.s
 .PHONY : src/iranyitas.cpp.s
 
+src/overlay.o: src/overlay.cpp.o
+.PHONY : src/overlay.o
+
+# target to build an object file
+src/overlay.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/overlay.dir/build.make CMakeFiles/overlay.dir/src/overlay.cpp.o
+.PHONY : src/overlay.cpp.o
+
+src/overlay.i: src/overlay.cpp.i
+.PHONY : src/overlay.i
+
+# target to preprocess a source file
+src/overlay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/overlay.dir/build.make CMakeFiles/overlay.dir/src/overlay.cpp.i
+.PHONY : src/overlay.cpp.i
+
+src/overlay.s: src/overlay.cpp.s
+.PHONY : src/overlay.s
+
+# target to generate assembly for a file
+src/overlay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/overlay.dir/build.make CMakeFiles/overlay.dir/src/overlay.cpp.s
+.PHONY : src/overlay.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -288,12 +325,16 @@ help:
 	@echo "... uninstall"
 	@echo "... draw_node"
 	@echo "... iranyitas"
+	@echo "... overlay"
 	@echo "... src/draw_node.o"
 	@echo "... src/draw_node.i"
 	@echo "... src/draw_node.s"
 	@echo "... src/iranyitas.o"
 	@echo "... src/iranyitas.i"
 	@echo "... src/iranyitas.s"
+	@echo "... src/overlay.o"
+	@echo "... src/overlay.i"
+	@echo "... src/overlay.s"
 .PHONY : help
 
 
