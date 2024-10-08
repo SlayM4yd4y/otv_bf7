@@ -43,7 +43,11 @@ Press the 'ESC' button to close it.
 **If the turtle doesn't move with 'w','a','s','d' , split the screen, one side wsl/terminal, other side turtlesim, click into the terminal and try the movements again!**
 
 ## The track 
+<p align = 'left'>
 ![kirajzolt_palya](img/kirajzolt_palya.png)
-
+</p>
+<p align = 'right'>
+![teknos_palya_coord](img/teknos_palya_coord.png)
+</p>
 
 
