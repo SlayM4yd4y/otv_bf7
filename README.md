@@ -43,11 +43,22 @@ Press the 'ESC' button to close it.
 **If the turtle doesn't move with 'w','a','s','d' , split the screen, one side wsl/terminal, other side turtlesim, click into the terminal and try the movements again!**
 
 ## The track 
-<p align = 'left'>
-![kirajzolt_palya](img/kirajzolt_palya.png)
-</p>
-<p align = 'right'>
-![teknos_palya_coord](img/teknos_palya_coord.png)
-</p>
+
+<table>
+  <tr>
+    <td>
+      <img src="img/kirajzolt_palya.png" alt="kirajzolt palya" width="200" height="200"/>
+    </td>
+    <td>
+      <img src="img/teknos_palya_coord.png" alt="teknos palya coord" width="200" height="200"/>
+    </td>
+  </tr>
+</table>
+
+## The drawing process
+
+<div align="center">
+  <img src="img/palya_rajzolas.gif" alt="palya rajzolas" width="600" height="338"/>
+</div>
 
 
