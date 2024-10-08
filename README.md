@@ -75,6 +75,8 @@ graph LR;
 
 draw([ /draw_node]):::red --> cmd_vel[ /cmd_vel<br/>geometry_msgs/Twist]:::light
 draw --> teleport[ /teleport_absolute<br/>turtlesim/srv/TeleportAbsolute]:::light
+draw --> set_pen[ /set_pen<br/>turtlesim/srv/SetPen]:::light
+draw --> pose[ /pose<br/>turtlesim/msg/Pose]:::light
 iranyitas([ /iranyitas]):::red --> cmd_vel
 overlay([ /overlay]):::red --> display[ /display<br/>cv::Mat]:::light
 
