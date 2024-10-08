@@ -37,11 +37,8 @@ Follow the order of instructions for optimal use:
 ```
 **If the turtle doesn't move with 'w','a','s','d' , split the screen, one side wsl/terminal, other side turtlesim, click into the terminal and try the movements again!**
 
-## Structure
-
-## Graph
-
-
+## The track 
+![kirajzolt_palya](img/kiralyzolt_palya.png)
 
 
 
