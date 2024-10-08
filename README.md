@@ -27,6 +27,11 @@ Follow the order of instructions for optimal use:
 ```
 1. ros2 run otv_bf7 overlay
 ```
+<details>
+<summary>You have to close the overlay before making the second step!</summary>
+Press the 'ESC' button to close it.
+</details>
+
 >To draw the track for the game
 ```
 2. ros2 run otv_bf7 draw_node
