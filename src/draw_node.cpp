@@ -33,6 +33,21 @@ private:
             auto stop_msg = geometry_msgs::msg::Twist();
             pub_->publish(stop_msg);
             RCLCPP_INFO(this->get_logger(), "A pálya rajzolása befejeződött.");
+            /*set_pen(false);
+            auto teleport_request = std::make_shared<turtlesim::srv::TeleportAbsolute::Request>();
+            teleport_request->x = 7.5;teleport_request->y = 5.5;teleport_request->theta = 0.0; 
+            auto teleport_client_ = this->create_client<turtlesim::srv::TeleportAbsolute>("/turtle1/teleport_absolute");
+            while (!teleport_client_->wait_for_service(5s)) {
+                RCLCPP_INFO(this->get_logger(), "Varakozas a turtlesim teleport szolgaltatasra...");
+            }
+            auto teleport_future = teleport_client_->async_send_request(teleport_request);
+            auto result = rclcpp::spin_until_future_complete(this->get_node_base_interface(), teleport_future);
+            if (result == rclcpp::FutureReturnCode::SUCCESS) {
+                RCLCPP_INFO(this->get_logger(), "Sikeres teleportáció.");
+            } else {
+                RCLCPP_ERROR(this->get_logger(), "Teleportációs hiba.");
+            }*/
+        
             rclcpp::shutdown();
         }
     }
@@ -82,7 +97,7 @@ public:
             RCLCPP_ERROR(this->get_logger(), "Teleportációs hiba.");
         }
         set_pen(true);
-        timer_ = this->create_wall_timer(1s, std::bind(&DrawNode::draw_track, this));
+        timer_ = this->create_wall_timer(1.85s, std::bind(&DrawNode::draw_track, this));
     }
 };
 
