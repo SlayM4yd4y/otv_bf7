@@ -44,13 +44,13 @@ Press the 'ESC' button to close it.
 
 ## The track 
 
-<table>
+<table align ="center">
   <tr>
     <td>
-      <img src="img/kirajzolt_palya.png" alt="kirajzolt palya" width="200" height="200"/>
+      <img src="img/kirajzolt_palya.png" alt="kirajzolt palya" width="250" height="250"/>
     </td>
     <td>
-      <img src="img/teknos_palya_coord.png" alt="teknos palya coord" width="200" height="200"/>
+      <img src="img/teknos_palya_coord.png" alt="teknos palya coord" width="250" height="250"/>
     </td>
   </tr>
 </table>
