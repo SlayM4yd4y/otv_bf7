@@ -70,5 +70,16 @@ Press the 'ESC' button to close it.
 </div>
 
 ## Diagram
+``` mermaid
+graph TD;
+    A[draw_node] -->|Publikál: /turtle1/cmd_vel| B[iranyitas]
+    A -->|Teleports the turtle| C[overlay]
+    B -->|Küld: cmd_vel| D[Motor]
+    C -->|Megjeleníti a szabályokat| E[Text Window]
 
-
+    style A fill:#f9f,stroke:#333,stroke-width:2px;
+    style B fill:#f9f,stroke:#333,stroke-width:2px;
+    style C fill:#f9f,stroke:#333,stroke-width:2px;
+    style D fill:#9ff,stroke:#333,stroke-width:2px;
+    style E fill:#9ff,stroke:#333,stroke-width:2px;
+```
