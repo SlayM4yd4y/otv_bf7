@@ -71,15 +71,15 @@ Press the 'ESC' button to close it.
 
 ## Diagram
 ``` mermaid
-graph TD;
-    A[draw_node] -->|Publikál: /turtle1/cmd_vel| B[iranyitas]
-    A -->|Teleports the turtle| C[overlay]
-    B -->|Küld: cmd_vel| D[Motor]
-    C -->|Megjeleníti a szabályokat| E[Text Window]
+graph LR;
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px;
-    style B fill:#f9f,stroke:#333,stroke-width:2px;
-    style C fill:#f9f,stroke:#333,stroke-width:2px;
-    style D fill:#9ff,stroke:#333,stroke-width:2px;
-    style E fill:#9ff,stroke:#333,stroke-width:2px;
+draw([ /draw_node]):::red --> cmd_vel[ /cmd_vel<br/>geometry_msgs/Twist]:::light
+draw --> teleport[ /teleport_absolute<br/>turtlesim/srv/TeleportAbsolute]:::light
+iranyitas([ /iranyitas]):::red --> cmd_vel
+overlay([ /overlay]):::red --> display[ /display<br/>cv::Mat]:::light
+
+classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
+classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#152742
+classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
 ```
