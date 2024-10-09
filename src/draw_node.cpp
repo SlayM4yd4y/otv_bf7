@@ -15,10 +15,10 @@ private:
     {
         auto request = std::make_shared<turtlesim::srv::SetPen::Request>();
         request->r = 235; request->g = 237; request->b = 22; request->width = 5; request->off = !enable;
-        auto result = set_pen_client_->async_send_request(request);
-        if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), result) != rclcpp::FutureReturnCode::SUCCESS) {
-            RCLCPP_ERROR(this->get_logger(), "Set_pen hiba.");
-        }
+        set_pen_client_->async_send_request(request, [this](rclcpp::Client<turtlesim::srv::SetPen>::SharedFuture)
+        {
+            RCLCPP_INFO(this->get_logger(), "Set_pen beállítás megtörtént.");
+        });
     }
     void pose_callback(const turtlesim::msg::Pose::SharedPtr msg) {current_pose_ = *msg;}
     void draw_track()
@@ -57,29 +57,15 @@ private:
             auto stop_msg = geometry_msgs::msg::Twist();
             pub_->publish(stop_msg);
             RCLCPP_INFO(this->get_logger(), "A pálya rajzolása befejeződött.");
-            /*set_pen(false);
+            set_pen(false);
             auto teleport_request = std::make_shared<turtlesim::srv::TeleportAbsolute::Request>();
             teleport_request->x = 7.5;teleport_request->y = 5.5;teleport_request->theta = 0.0; 
-            auto teleport_client = this->create_client<turtlesim::srv::TeleportAbsolute>("/turtle1/teleport_absolute");
-            while (!teleport_client->wait_for_service(5s)) {
-                RCLCPP_INFO(this->get_logger(), "Varakozas a turtlesim teleport szolgaltatasra...");
-            }
-            auto teleport_future = teleport_client->async_send_request(teleport_request);
-            auto result = rclcpp::spin_until_future_complete(this->get_node_base_interface(), teleport_future);
-            if (result == rclcpp::FutureReturnCode::SUCCESS) {
-                RCLCPP_INFO(this->get_logger(), "Sikeres teleportáció.");
-            } else {
-                RCLCPP_ERROR(this->get_logger(), "Teleportációs hiba.");
-            }
-            set_pen(true);
-            auto pen_request = std::make_shared<turtlesim::srv::SetPen::Request>();
-            pen_request->r = 255;pen_request->g = 0;pen_request->b = 0;pen_request->width = 4;pen_request->off = false;
-            auto pen_result = set_pen_client_->async_send_request(pen_request);
-            if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), pen_result) != rclcpp::FutureReturnCode::SUCCESS) {
-                RCLCPP_ERROR(this->get_logger(), "Set_pen szin beallitas hiba.");
-            }
-            */
-            rclcpp::shutdown();
+            teleport_client_->async_send_request(teleport_request, [this](rclcpp::Client<turtlesim::srv::TeleportAbsolute>::SharedFuture /*result*/)
+            {
+                RCLCPP_INFO(this->get_logger(), "Teleportáció a STARTBA megtörtént.");
+                rclcpp::shutdown();
+            });
+            
         }
     }
 
@@ -121,14 +107,11 @@ public:
         set_pen(false);
         auto teleport_request = std::make_shared<turtlesim::srv::TeleportAbsolute::Request>();
         teleport_request->x = 1.0; teleport_request->y = 1.0; teleport_request->theta = 0.0;
-        auto teleport_future = teleport_client_->async_send_request(teleport_request);
-        auto result = rclcpp::spin_until_future_complete(this->get_node_base_interface(), teleport_future);
-        if (result == rclcpp::FutureReturnCode::SUCCESS) {
-            RCLCPP_INFO(this->get_logger(), "Sikeres teleportáció.");
-        } else {
-            RCLCPP_ERROR(this->get_logger(), "Teleportációs hiba.");
-        }
-        set_pen(true);
+         teleport_client_->async_send_request(teleport_request, [this](rclcpp::Client<turtlesim::srv::TeleportAbsolute>::SharedFuture /*result*/)
+        {
+            RCLCPP_INFO(this->get_logger(), "Kezdeti teleportáció megtörtént.");
+            set_pen(true);
+        });
         auto pose_subscriber = this->create_subscription<turtlesim::msg::Pose>(
             "/turtle1/pose", 10, std::bind(&DrawNode::pose_callback, this, std::placeholders::_1));
 
@@ -139,7 +122,8 @@ public:
 int main(int argc, char **argv)
 {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<DrawNode>());
+    auto node = std::make_shared<DrawNode>();
+    rclcpp::spin(node);
     rclcpp::shutdown();
     return 0;
 }
