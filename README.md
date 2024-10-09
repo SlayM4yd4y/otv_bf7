@@ -31,7 +31,7 @@ source ~/ros2_ws/install/setup.bash
 </details>
 
 Follow the order of instructions for optimal use:
->Start turtlesim
+>Start turtlesim in a different(new) terminal
 ```
 ros2 run turtlesim turtlesim_node
 ``` 
