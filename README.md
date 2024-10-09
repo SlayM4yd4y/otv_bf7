@@ -31,9 +31,13 @@ source ~/ros2_ws/install/setup.bash
 </details>
 
 Follow the order of instructions for optimal use:
+>Start turtlesim
+```
+ros2 run turtlesim turtlesim_node
+``` 
 >To display the rules of the game in a new overlay window:
 ```
-1. ros2 run otv_bf7 overlay
+ros2 run otv_bf7 overlay
 ```
 <details>
 <summary>You have to close the overlay before making the second step!</summary>
@@ -42,11 +46,11 @@ Press the 'ESC' button to close it.
 
 >To draw the track for the game
 ```
-2. ros2 run otv_bf7 draw_node
+ros2 run otv_bf7 draw_node
 ```
 >To gain control over the turtle
 ```
-3. ros2 run otv_bf7 iranyitas
+ros2 run otv_bf7 iranyitas
 ```
 **If the turtle doesn't move with 'w','a','s','d' , split the screen, one side wsl/terminal, other side turtlesim, click into the terminal and try the movements again!**
 

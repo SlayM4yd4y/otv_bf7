@@ -86,7 +86,7 @@ public:
         pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
 
         directions_ = {
-            {8.0, 0.0}, {0.0, 3.0},
+            {8.0, 0.0}, {0.0, 3.0},  
             {-7.0, 0.0}, {0.0, 2.0},
             {4.0, 0.0}, {0.0, 3.0},
             {-4.0, 0.0}, {0.0, 0.0},
