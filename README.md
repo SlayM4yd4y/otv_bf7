@@ -14,7 +14,7 @@ The implementation is designed to run under ROS 2 Humble.
 cd ~/ros2_ws/src
 ```
 ```
-git clone https://github.com/Sl4yM4yd4y/otv_bf7
+git clone https://github.com/SlayM4yd4y/otv_bf7
 ```
 ## Build this ROS 2 package
 >It is assumed that the workspace is still `~/ros2_ws/`.
